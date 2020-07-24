@@ -111,3 +111,9 @@ int Solution::repeatedNumber(const vector<int> &A) {
 // 2. Same as one (increase that specific count)
 // 3. Two elements not there, hence add to list (of two elements)
 // Finally check the counts of these two remaining elements
+
+// Why does Moore's algo work?
+// Only two elements at max can have count > N/3
+// We are just finding the probable candidates for these two elements. 
+// Whenever we encounter three diff elements, we decrease the count of the two probables. 
+// If they are present more than N/3 times, they will be there at the end as at max we can have N/3 distinct triplets.
